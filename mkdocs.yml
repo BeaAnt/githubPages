@@ -43,20 +43,19 @@ theme:
 
 nav:
   - Test:
-    - definitions: Reference/definitions.md
+    - Definitions: Test/definitions.md
   
   - Reference:
     - Definitions: Reference/definitions.md
     - Platform Requirements: 
       - Openshift - ROSA: Reference/Platform Requirements/openshift.md
-    - IDP Documentation Workflow: Reference/docs-workflow.md
+      
   - Use Case & Design:
     - Process:
       - Stakeholders: "Design/Process/governance-stakeholders.md"
       - Governance Flows: "Design/Process/governance-flows.md"
     - Delivery Strategy: "Design/Process/delivery-strategies.md"
     
-    #- Use Case Drive Design: "Design/use-case-drive.md"
 
 extra_css:
   - stylesheets/extra.css
