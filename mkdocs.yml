@@ -37,7 +37,7 @@ theme:
         icon: material/brightness-4
         name: Switch to system preference
 
- # logo: Images/logo-gridspertise-no-claim.svg
+ # logo: Images/logo-no-claim.svg
   features:
     - navigation.tabs
 

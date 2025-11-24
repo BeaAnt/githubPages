@@ -1,5 +1,5 @@
 [project]
-name = "idp-docs"
+name = "docs"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"

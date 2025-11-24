@@ -1,5 +1,5 @@
 def main():
-    print("Hello from docs-idp-tech-stack!")
+    print("Hello from docs-tech-stack!")
 
 
 if __name__ == "__main__":
