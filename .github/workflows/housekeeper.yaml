@@ -1,0 +1,58 @@
+---
+
+name: housekeeping - cleanup merged branches
+
+on:
+  schedule:
+    - cron:  '27 4 * * *'
+
+jobs:
+
+  check_upstream:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install the latest version of uv
+        uses: astral-sh/setup-uv@v3
+        with:
+          version: "latest"
+
+      - name: clean up old branches
+        run: |
+          # sh
+
+          set -x
+
+          mkdir -p src/idp_docs
+          touch src/idp_docs/__init__.py
+
+          git config --global user.name janitor
+          git config --global user.email janitor@ci
+
+          comm -23 \
+            <(uv run mike list | sort) \
+            <(git tag | sort) \
+            | grep -v current \
+            | while read version
+              do
+                git branch -a \
+                  | tr / - \
+                  | grep -q "$version" \
+                  || echo $version
+              done \
+            | xargs -r echo uv run mike delete
+
+          git push origin gh-pages
+
+          # /sh

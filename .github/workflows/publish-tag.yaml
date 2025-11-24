@@ -1,0 +1,17 @@
+---
+
+name: tag a version
+run-name: publish `${{ github.ref_name }}` tag
+
+on:
+  push:
+    tags:
+      - '**'
+
+jobs:
+  publish:
+    uses: ./.github/workflows/workflow-publish.yaml
+    permissions:
+      contents: write
+    with:
+      version: ${{ github.ref_name }}

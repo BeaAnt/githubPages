@@ -1,0 +1,82 @@
+site_name: Tech stack
+site_url: https://mytechstack.pages.github.io/
+
+repo_url: https://github.com/BeaAnt/docs
+repo_name: Site Sources
+
+theme:
+  name: material
+  palette:
+
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      primary: custom
+      accent: custom
+
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
+ # logo: Images/logo-gridspertise-no-claim.svg
+  features:
+    - navigation.tabs
+
+nav:
+  - Test:
+    - definitions: Reference/definitions.md
+  
+  - Reference:
+    - Definitions: Reference/definitions.md
+    - Platform Requirements: 
+      - Openshift - ROSA: Reference/Platform Requirements/openshift.md
+    - IDP Documentation Workflow: Reference/docs-workflow.md
+  - Use Case & Design:
+    - Process:
+      - Stakeholders: "Design/Process/governance-stakeholders.md"
+      - Governance Flows: "Design/Process/governance-flows.md"
+    - Delivery Strategy: "Design/Process/delivery-strategies.md"
+    
+    #- Use Case Drive Design: "Design/use-case-drive.md"
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+plugins:
+  - mike
+  #- git-authors
+  - search
+
+extra:
+  version:
+    provider: mike
