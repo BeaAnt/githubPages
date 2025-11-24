@@ -37,7 +37,7 @@ theme:
         icon: material/brightness-4
         name: Switch to system preference
 
- # logo: Images/logo-no-claim.svg
+  logo: Images/immaginelogo.PNG
   features:
     - navigation.tabs
 
@@ -48,7 +48,7 @@ nav:
   - Reference:
     - Definitions: Reference/definitions.md
     - Platform Requirements: 
-      - Openshift - ROSA: Reference/Platform Requirements/openshift.md
+      - Openshift: Reference/Platform Requirements/openshift.md
 
   - Use Case & Design:
     - Process:

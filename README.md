@@ -1,19 +1,21 @@
-# docs
+# githubPages
 
-## developer setup
+Questo repository contiene la documentazione creata utilizzando **MkDocs** e pubblicata su **GitHub Pages** per una facile consultazione online.
 
-Needed tools:
+Visita: [Documentation](https://beaant.github.io/githubPages/)
 
-* python >= 3.10
-* [uv](https://docs.astral.sh/uv/)
+## Struttura del Repository
 
-Create and activate a venv, then launch development server which will listen on
-[http://127.0.0.1:8000/](http://127.0.0.1:8000/) by default.
+- **docs/**
 
-``` shell
+Contiene i file Markdown che costituiscono la documentazione. Ogni file rappresenta una pagina del sito. Puoi anche organizzare i file in sottocartelle per creare sezioni specifiche nella navigazione, rendendo la documentazione più ordinata e facile da navigare.
 
-uv venv
-uv sync
-mkdocs serve
-```
+- **mkdocs.yaml** 
+
+File di configurazione di MkDocs. In questo file puoi definire la navigazione del sito nella sezione `nav`.
+
+Dettagli sulla sezione `nav`: 
+- controlla la struttura della navigazione del sito generato
+- organizza il contenuto della documentazione, specificando l'ordine delle pagine e raggruppandole in sezioni
+- ogni voce rappresenta una pagina, una sezione o una sottosezione del sito
 
