@@ -49,10 +49,10 @@ nav:
     - Definitions: Reference/definitions.md
     - Platform Requirements: 
       - Openshift - ROSA: Reference/Platform Requirements/openshift.md
-      
+
   - Use Case & Design:
     - Process:
-      - Stakeholders: "Design/Process/governance-stakeholders.md"
+      - Stakeholders: "Design/Process/test.md"
       - Governance Flows: "Design/Process/governance-flows.md"
     - Delivery Strategy: "Design/Process/delivery-strategies.md"
     
