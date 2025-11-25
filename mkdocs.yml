@@ -37,7 +37,7 @@ theme:
         icon: material/brightness-4
         name: Switch to system preference
 
-  logo: Images/immaginelogo.svg
+  logo: Images/Immaginelogo.svg
   features:
     - navigation.tabs
 
